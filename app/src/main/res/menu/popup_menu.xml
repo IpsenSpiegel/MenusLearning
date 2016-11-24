@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    //realmente es un menu flotante
+    <group>
+        <item
+            android:id="@+id/add_item"
+            android:title="@string/add_item"
+            android:icon="@mipmap/ic_launcher"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/Like"
+            android:title="@string/like"
+            android:icon="@mipmap/ic_launcher"/>
+
+    </group>
+    <item
+        android:id="@+id/Dislike"
+        android:title="@string/dislike"
+        android:icon="@mipmap/ic_launcher"/>
+</menu>

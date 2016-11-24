@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group>
     <item
         android:id="@+id/menuprincipal"
         android:title="principal"
@@ -9,16 +8,15 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/Like"
-        android:title="Like"
+        android:id="@+id/menusecundario"
+        android:title="Secundario"
         android:icon="@mipmap/ic_launcher"
         app:showAsAction="always"/>
 
-    </group>
+
     <item
-        android:id="@+id/Dislike"
-        android:title="Dislike"
+        android:id="@+id/menuterciario"
+        android:title="Terciario"
         android:icon="@mipmap/ic_launcher"
         app:showAsAction="always"/>)
-
 </menu>
