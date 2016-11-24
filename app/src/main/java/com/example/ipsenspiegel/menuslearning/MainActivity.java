@@ -12,9 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements ActionMode.Callback, View.OnClickListener{
+import static android.view.View.*;
+
+public class MainActivity extends AppCompatActivity implements ActionMode.Callback, OnClickListener{
     private static final String TAG_MAIN_ACTIVITY = "In-MainActivity";
     TextView hello;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -23,9 +26,8 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
 
         this.hello = (TextView)findViewById(R.id.hello_TxTView);
         this.registerForContextMenu(this.hello);
-
     }
-
+ 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -59,10 +61,12 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
             return true;
         } else if (item.getItemId() == R.id.Dislike) {
             Log.i("TAG", "Dislike ;(");
+            this.startActivity(new Intent(this, SecondaryActivity.class));
             return true;
         }
         return false;
     }
+
 
     @Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
@@ -87,9 +91,10 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
     @Override
     public void onClick(View whichView)
     {
+        Log.e(MainActivity.TAG_MAIN_ACTIVITY, "Button pulsed");
         if (whichView.getId() == R.id.hello_TxTView)
         {
-            Log.i(MainActivity.TAG_MAIN_ACTIVITY, "Layout clicked");
+            Log.e(MainActivity.TAG_MAIN_ACTIVITY, "Button pulsed");
             this.startActivity(new Intent(this, SecondaryActivity.class));
         }
     }

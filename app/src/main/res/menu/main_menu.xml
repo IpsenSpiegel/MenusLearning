@@ -4,7 +4,7 @@
     <item
         android:id="@+id/menuprincipal"
         android:title="principal"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_share_black_24dp"
         app:showAsAction="always"/>
 
     <item
@@ -18,5 +18,5 @@
         android:id="@+id/menuterciario"
         android:title="Terciario"
         android:icon="@mipmap/ic_launcher"
-        app:showAsAction="always"/>)
+        app:showAsAction="always"/>
 </menu>
